@@ -9,7 +9,7 @@ function matchers() {
     alert("Your turn!");
     let m = prompt("Get the matches!");
     if (isNaN(m) || m < 0 || m > 3) {
-      break;
+      return;
     }
     n -= m;
     matcher();
