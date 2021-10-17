@@ -1,6 +1,11 @@
-let n = 13;
 let str = " ";
-function matchers() {
+function show(n) {
+  function matcher() {
+    for (let i = 0; i < n; i++) {
+      str += "| ";
+    }
+  }
+
   matcher();
   document.write(n);
 
@@ -9,7 +14,7 @@ function matchers() {
     alert("Your turn!");
     let m = prompt("Get the matches!");
     if (isNaN(m) || m < 0 || m > 3) {
-      return;
+      break;
     }
     n -= m;
     matcher();
@@ -26,10 +31,5 @@ function matchers() {
       alert("I win!");
       break;
     }
-  }
-}
-function matcher() {
-  for (let i = 0; i < n; i++) {
-    str += "| ";
   }
 }
